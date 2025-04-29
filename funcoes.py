@@ -10,12 +10,12 @@ def rolar_dados (numero_dados):
 
 def guardar_dado (rolados, guardados, indice):
   lista = []
-  numero = rolados[indice]
-
-  guardados.append(numero)
+  
+  guardados.append(rolados[indice])
+  
   del(rolados[indice])
 
-  lista[0]= rolados
-  lista[1]= guardados
+  lista.append(rolados)
+  lista.append(guardados)
   
   return lista
