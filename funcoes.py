@@ -26,7 +26,7 @@ def remover_dado (rolados, guardados, indice):
 
   del(guardados[indice])
 
-  lista.append(guardados)
   lista.append(rolados)
+  lista.append(guardados)
   
   return lista
