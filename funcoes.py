@@ -12,10 +12,21 @@ def guardar_dado (rolados, guardados, indice):
   lista = []
   
   guardados.append(rolados[indice])
-  
+
   del(rolados[indice])
 
   lista.append(rolados)
   lista.append(guardados)
+  
+  return lista
+
+def remover_dado (rolados, guardados, indice):
+  lista = []
+  rolados.append(guardados[indice])
+
+  del(guardados[indice])
+
+  lista.append(guardados)
+  lista.append(rolados)
   
   return lista
