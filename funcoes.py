@@ -31,7 +31,7 @@ def remover_dado (rolados, guardados, indice):
   
   return lista
 
-def calcula_pontos_regra_simples (faces,pontos):
+def calcula_pontos_regra_simples (faces):
   dicio = {}
   i = 0 
 
