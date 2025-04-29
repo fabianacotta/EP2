@@ -34,6 +34,7 @@ def remover_dado (rolados, guardados, indice):
 def calcula_pontos_regra_simples (faces,pontos):
   dicio = {}
   i = 0 
+
   while i < len(faces):
     if faces[i]== 6 or faces[i]== 1:
       dicio[faces[i]]=0
