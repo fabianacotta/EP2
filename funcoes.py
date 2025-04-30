@@ -83,6 +83,6 @@ def calcula_pontos_soma (faces):
   soma = 0 
   i = 0 
   while i < len(faces):
-    soma = +faces[i]
+    soma += faces[i]
     i+=1
   return soma 
