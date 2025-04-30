@@ -54,3 +54,5 @@ def calcula_pontos_regra_simples (faces):
     i+=1
 
   return dicio
+
+#ex5
