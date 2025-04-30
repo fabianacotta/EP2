@@ -90,9 +90,15 @@ def calcula_pontos_soma (faces):
 #Q6
 def calcula_pontos_sequencia_baixa (faces):
   i = 0 
-  while i+1 < len(faces):
-    if faces[i]== faces[i+1]:
+  lista = []
+  while i < len(faces):
+    if faces[i] in lista:
       return 0
-    else: 
+    
+    if faces[i] not in lista:
+      lista.append[faces[i]]
       i+=1
+
   return 15
+
+    
