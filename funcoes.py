@@ -32,27 +32,43 @@ def remover_dado (rolados, guardados, indice):
   return lista
 
 def calcula_pontos_regra_simples (faces):
-  dicio = {}
+  dicio = {} * 6
   i = 0 
+  pontos1 = 0 
+  pontos2 = 0
+  pontos3 = 0
+  pontos4 = 0
+  pontos5 = 0
+  pontos6 = 0
 
   while i < len(faces):
-    if faces[i]== 6 or faces[i]== 1:
-      dicio[faces[i]]=0
+    if faces[i]== 1:
+      pontos1 += 1 
     
     if faces[i]==2:
-      dicio[faces[i]]=4
+      pontos2 += 2
     
     if faces[i]==3:
-      dicio[faces[i]]=3
+      pontos3 += 3
 
     if faces[i]==4:
-      dicio[faces[i]]=4
+      pontos4 += 4
 
     if faces[i]==5:
-      dicio[faces[i]]=5
-    
+      pontos5 += 5
+
+    if faces[i]==6:
+      pontos6 += 5
+
     i+=1
 
+  dicio[1] = pontos1
+  dicio[2] = pontos2
+  dicio[3] = pontos3
+  dicio[4] = pontos4
+  dicio[5] = pontos5
+  dicio[6] = pontos6
+  
   return dicio
 
-#ex5
+  
