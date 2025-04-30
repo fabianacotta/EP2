@@ -1,4 +1,6 @@
 import random
+
+#Q1
 def rolar_dados (numero_dados):
   sorteados = [] 
   i = 0 
@@ -8,6 +10,7 @@ def rolar_dados (numero_dados):
     i+=1
   return sorteados 
 
+#Q2
 def guardar_dado (rolados, guardados, indice):
   lista = []
   
@@ -20,6 +23,7 @@ def guardar_dado (rolados, guardados, indice):
   
   return lista
 
+#Q3
 def remover_dado (rolados, guardados, indice):
   lista = []
   rolados.append(guardados[indice])
@@ -31,6 +35,7 @@ def remover_dado (rolados, guardados, indice):
   
   return lista
 
+#Q4
 def calcula_pontos_regra_simples (faces):
 
   dicio = {}
@@ -73,4 +78,11 @@ def calcula_pontos_regra_simples (faces):
 
   return dicio
 
-  
+#Q5
+def calcula_pontos_soma (faces):
+  soma = 0 
+  i = 0 
+  while i < len(faces):
+    soma = +faces[i]
+    i+=1
+  return soma 
