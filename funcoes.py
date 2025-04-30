@@ -32,7 +32,9 @@ def remover_dado (rolados, guardados, indice):
   return lista
 
 def calcula_pontos_regra_simples (faces):
-  dicio = {} * 6
+
+  dicio = {}
+  
   i = 0 
   pontos1 = 0 
   pontos2 = 0
@@ -68,7 +70,7 @@ def calcula_pontos_regra_simples (faces):
   dicio[4] = pontos4
   dicio[5] = pontos5
   dicio[6] = pontos6
-  
+
   return dicio
 
   
