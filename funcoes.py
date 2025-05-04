@@ -135,6 +135,7 @@ def calcula_pontos_full_house (faces):
   i = 0
   qtd_3 = []
   qtd_2 = []
+  outros = []
   soma = 0 
 
   while i < len(faces):
@@ -148,6 +149,10 @@ def calcula_pontos_full_house (faces):
     if faces[i] not in qtd_3:
         if qtd_2 == []:
           qtd_2.append(faces[i])
+        else:
+          if faces[i] not in qtd_2:
+            outros.append(faces[i])
+        
         if faces[i] in qtd_2:
           qtd_2.append(faces[i])
     
