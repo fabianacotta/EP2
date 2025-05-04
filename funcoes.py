@@ -109,3 +109,23 @@ def calcula_pontos_sequencia_baixa (faces):
   
   else:
     return 0 
+
+#Q7 
+def calcula_pontos_sequencia_alta (faces):
+  i = 0 
+  lista = []
+  
+  while i < len(faces):
+    if faces[i] not in lista:
+      lista.append(faces[i])
+    i+=1
+
+  
+  if 1 in lista and 2 in lista and 3 in lista and 4 in lista and 5 in lista:
+    return 30
+  
+  if 2 in lista and 3 in lista and 4 in lista and 5 in lista and 6 in lista:
+    return 30
+  
+  else:
+    return 0 
