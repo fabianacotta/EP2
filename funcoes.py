@@ -256,9 +256,13 @@ def calcula_pontos_regra_avancada (faces):
   return dicio
 
 #Q12
-def faz_jogada (faces, categoria, local):
+def faz_jogada (faces, categoria, cartela):
   simples = calcula_pontos_regra_simples(faces)
   avancada = calcula_pontos_regra_avancada(faces)
 
   dicio = {'regra_simples':simples, 'regra_avancada':avancada}
+
+  for categoria in dicio.keys():
+    cartela[categoria] = dicio[categoria]
+
   return dicio
