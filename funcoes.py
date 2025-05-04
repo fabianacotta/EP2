@@ -240,7 +240,6 @@ def calcula_pontos_quina (faces):
   
 #Q11
 def calcula_pontos_regra_avancada (faces):
-  dicio = {}
 
   cinco = calcula_pontos_quina(faces)
   house = calcula_pontos_full_house(faces)
@@ -249,7 +248,6 @@ def calcula_pontos_regra_avancada (faces):
   alta = calcula_pontos_sequencia_alta(faces)
   baixa = calcula_pontos_sequencia_baixa(faces)
 
-  dicio.keys(['cinco_iguais','full_house','quadra','sem_combinacao','sequencia_alta','sequencia_baixa'])
-  dicio.values([cinco,house,quatro,sem,alta,baixa])
-
+  dicio = {'cinco_iguais':cinco, 'full_house':house, 'quadra':quatro, 'sem_combinacao': sem,'sequencia_alta':alta, 'sequencia_baixa':baixa}
+  
   return dicio
