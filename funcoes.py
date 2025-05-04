@@ -132,23 +132,24 @@ def calcula_pontos_sequencia_alta (faces):
   
 #Q8
 def calcula_pontos_full_house (faces):
-  i = 1
+  i = 0
   qtd_3= []
   qtd_2= []
   soma = 0 
 
-  qtd_3.append(faces[0])
-
   while i < len(faces):
 
-    if faces[i] in qtd_3:
+    if qtd_3 == []: 
       qtd_3.append(faces[i])
-
     else:
-      if qtd_2 == []:
-        qtd_2.append(faces[i])
-      if faces[i] in qtd_2:
-        qtd_2.append(faces[i])
+      if faces[i] in qtd_3:
+        qtd_3.append(faces[i])
+
+      else:
+        if qtd_2 == []:
+          qtd_2.append(faces[i])
+        if faces[i] in qtd_2:
+          qtd_2.append(faces[i])
     
     i+=1
 
@@ -159,12 +160,6 @@ def calcula_pontos_full_house (faces):
       soma += faces[j]
       j+=1
     return soma
-  
-  if len(qtd_3)== 2 and len(qtd_2)== 3:
-    while j < len(faces):
-      soma += faces[j]
-      j+=1
-    return soma
-  
+
   else:
     return 0
