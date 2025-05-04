@@ -254,3 +254,11 @@ def calcula_pontos_regra_avancada (faces):
   dicio = {'cinco_iguais':cinco, 'full_house':house, 'quadra':quatro, 'sem_combinacao': sem,'sequencia_alta':alta, 'sequencia_baixa':baixa}
   
   return dicio
+
+#Q12
+def faz_jogada (faces, categoria, local):
+  simples = calcula_pontos_regra_simples(faces)
+  avancada = calcula_pontos_regra_avancada(faces)
+
+  dicio = {'regra_simples':simples, 'regra_avancada':avancada}
+  return dicio
