@@ -260,17 +260,17 @@ def faz_jogada (faces, categoria, cartela):
   simples = calcula_pontos_regra_simples(faces)
   avancada = calcula_pontos_regra_avancada(faces)
 
+  dicio = cartela
+
   if categoria in simples:
-    for categoria in simples:
-      resultado = simples[categoria]
-      cartela[categoria] = resultado
+    for simples in dicio.keys():
+      for categoria in simples:
+        resultado = simples[categoria]
 
   if categoria in avancada:
-    for categoria in avancada:
-      resultado = avancada[categoria]
-      cartela[categoria] = resultado
-
-  dicio = cartela 
+    for avancado in dicio.keys():
+      for categoria in avancada:
+        resultado = avancada[categoria]
 
   return dicio 
 
