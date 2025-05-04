@@ -155,7 +155,7 @@ def calcula_pontos_full_house (faces):
 
   j = 0 
 
-  if len(qtd_3)== 3 and len(qtd_2)== 2:
+  if len(qtd_3)== 3 and len(qtd_2)== 2 or len(qtd_3)== 2 and len(qtd_2)== 3:
     while j < len(faces):
       soma += faces[j]
       j+=1
