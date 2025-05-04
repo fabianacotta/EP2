@@ -139,14 +139,14 @@ def calcula_pontos_full_house (faces):
 
   while i < len(faces):
 
-    if len(qtd_3) == 0: 
+    if qtd_3 == []: 
       qtd_3.append(faces[i])
     else:
       if faces[i] in qtd_3:
         qtd_3.append(faces[i])
 
       else:
-        if len(qtd_2) == 0:
+        if qtd_2 == []:
           qtd_2.append(faces[i])
         if faces[i] in qtd_2:
           qtd_2.append(faces[i])
@@ -155,13 +155,13 @@ def calcula_pontos_full_house (faces):
 
   j = 0 
 
-  if len(qtd_3)== 3 and len(qtd_2)== 2 or len(qtd_3)== 2 and len(qtd_2)== 3:
+  if len(qtd_3)!= 3 and len(qtd_2)!= 2 or len(qtd_3)!= 2 and len(qtd_2)!= 3:
+    return 0
+  
+  else:
     while j < len(faces):
       soma += faces[j]
       j+=1
     return soma
-
-  else:
-    return 0
 
 
