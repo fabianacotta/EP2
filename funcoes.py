@@ -166,7 +166,7 @@ def calcula_pontos_full_house (faces):
   if len(qtd_3) > 3:
     return 0
   
-  if len(qtd_3) >= 4:
+  if len(qtd_2) > 3:
     return 0
   
   else:
