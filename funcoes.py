@@ -193,5 +193,5 @@ def calcula_pontos_quadra (faces):
       j+=1
     return soma
   
-  else: 
+  if len(iguais)< 4: 
     return 0 
