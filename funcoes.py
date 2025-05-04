@@ -161,5 +161,5 @@ def calcula_pontos_full_house (faces):
       j+=1
     return soma
 
-  else:
+  if len(qtd_3)!=3 or len(qtd_2)!=2 :
     return 0
