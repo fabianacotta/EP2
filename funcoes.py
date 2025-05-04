@@ -187,11 +187,11 @@ def calcula_pontos_quadra (faces):
         iguais.append(faces[i])
     i+=1
 
-  if len(iguais)>= 4:
+  if len(iguais)< 4: 
+    return 0 
+  
+  else:
     while j < len(faces):
       soma += faces[j]
       j+=1
     return soma
-  
-  if len(iguais)< 4: 
-    return 0 
