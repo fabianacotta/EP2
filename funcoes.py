@@ -171,3 +171,27 @@ def calcula_pontos_full_house (faces):
       soma += faces[j]
       j+=1
     return soma
+  
+#Q9
+def calcula_pontos_quadra (faces):
+  i = 0 
+  j = 0
+  soma = 0 
+  iguais = []
+
+  while i < len(faces):
+    if iguais == []:
+      iguais.append(faces[i])
+    else:
+      if faces[i] in iguais:
+        iguais.append(faces[i])
+    i+=1
+
+  if len(iguais)>= 4:
+    while j < len(iguais):
+      soma += faces[j]
+      j+=1
+    return soma
+  
+  else: 
+    return 0 
