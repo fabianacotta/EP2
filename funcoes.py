@@ -181,25 +181,25 @@ def calcula_pontos_quadra (faces):
   ig_2 = 0 
   ig_3 = 0 
   ig_4 = 0 
-  ig_5 = 0 
-  ig_6 = 0 
+  ig_5 = 0
+  ig_6 = 0
 
   while i < len(faces):
     if faces[i] == 1:
-      ig_1.append(faces[i])
+      ig_1+=1
     if faces[i] == 2:
-      ig_2.append(faces[i])
+      ig_2+=1
     if faces[i] == 3:
-      ig_3.append(faces[i])
+      ig_3+=1
     if faces[i] == 4:
-      ig_4.append(faces[i])
+      ig_4+=1
     if faces[i] == 5:
-      ig_5.append(faces[i])
+      ig_5+=1
     if faces[i] == 6:
-      ig_6.append(faces[i])
+      ig_6+=1
     i+=1
 
-  if len(ig_1) >= 4 or len(ig_2) >= 4  or len(ig_3) >= 4 or len(ig_4) >= 4 or len(ig_5) >= 4 or len(ig_6) >= 4:
+  if ig_1 >= 4 or ig_2 >= 4 or ig_3 >= 4 or ig_4 >= 4 or ig_5 >= 4 or ig_6 >= 4:
     while j < len(faces):
       soma += faces[j]
       j+=1
