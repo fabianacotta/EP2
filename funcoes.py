@@ -263,15 +263,14 @@ def faz_jogada (faces, categoria, cartela):
   if categoria in simples:
     for categoria in simples:
       resultado = simples[categoria]
+      cartela[categoria] = resultado
 
   if categoria in avancada:
     for categoria in avancada:
       resultado = avancada[categoria]
-  
-  for categoria in cartela:
-    cartela[categoria]= resultado
+      cartela[categoria] = resultado
 
   dicio = cartela 
-  
+
   return dicio 
 
