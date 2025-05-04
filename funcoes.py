@@ -174,27 +174,25 @@ def calcula_pontos_full_house (faces):
   
 #Q9
 def calcula_pontos_quadra (faces):
-  i = 1
+  i = 0 
   j = 0
   soma = 0 
   iguais = []
-  totais = []
-  
-  totais.append(faces[0])
 
   while i < len(faces):
-    if faces[i] in totais:
+    if iguais == []:
       iguais.append(faces[i])
     else:
-      totais.append(faces[i])
+      if faces[i] in iguais:
+        iguais.append(faces[i])
     i+=1
-  
-  if len(iguais)<4:
+
+  if len(iguais) < 4: 
     return 0 
   
   else:
     while j < len(faces):
-      soma += faces[i]
+      soma += faces[j]
       j+=1
     return soma
 
