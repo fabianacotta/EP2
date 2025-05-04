@@ -206,3 +206,34 @@ def calcula_pontos_quadra (faces):
     return soma
   else:
     return 0 
+  
+#Q10
+def calcula_pontos_quina (faces):
+  i = 0 
+
+  ig_1 = 0
+  ig_2 = 0 
+  ig_3 = 0 
+  ig_4 = 0 
+  ig_5 = 0
+  ig_6 = 0
+
+  while i < len(faces):
+    if faces[i] == 1:
+      ig_1+=1
+    if faces[i] == 2:
+      ig_2+=1
+    if faces[i] == 3:
+      ig_3+=1
+    if faces[i] == 4:
+      ig_4+=1
+    if faces[i] == 5:
+      ig_5+=1
+    if faces[i] == 6:
+      ig_6+=1
+    i+=1
+
+  if ig_1 >= 5 or ig_2 >= 5 or ig_3 >= 5 or ig_4 >= 5 or ig_5 >= 5 or ig_6 >= 5:
+    return 50
+  else:
+    return 0 
