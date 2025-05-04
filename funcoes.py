@@ -101,15 +101,16 @@ def calcula_pontos_sequencia_baixa (faces):
   ordem = []
 
   while j+1 < len(lista):
-    if lista[j] < lista[j+1]:
-      ordem.append(lista[j])
-      j+=1
+    if len(lista)== 4:
+      if lista[j] < lista[j+1]:
+        ordem.append(lista[j])
+        j+=1
       
-  if ordem[0] == 1 and ordem[1]== 2 and ordem[2]== 3 and ordem[3]== 4 and len(ordem)==4:
+  if ordem[0] == 1 and ordem[1]== 2 and ordem[2]== 3 and ordem[3]== 4:
     return 15
-  if ordem[0] == 2 and ordem[1]== 3 and ordem[2]== 4 and ordem[3]== 5 and len(ordem)==4:
+  if ordem[0] == 2 and ordem[1]== 3 and ordem[2]== 4 and ordem[3]== 5:
     return 15
-  if ordem[0] == 3 and ordem[1]== 4 and ordem[2]== 5 and ordem[3]== 6 and len(ordem)==4:
+  if ordem[0] == 3 and ordem[1]== 4 and ordem[2]== 5 and ordem[3]== 6:
     return 15
   else: 
     return 0 
