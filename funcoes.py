@@ -97,7 +97,7 @@ def calcula_pontos_sequencia_baixa (faces):
       lista.append(faces[i])
     i+=1
 
-  j=0
+  j = 0
   ordem = []
 
   while j+1 < len(lista):
@@ -106,7 +106,7 @@ def calcula_pontos_sequencia_baixa (faces):
         ordem.append(lista[j])
       else: 
         ordem.append(lista[j+1])
-      j+=1
+    j+=1
       
   if ordem[0] == 1 and ordem[1]== 2 and ordem[2]== 3 and ordem[3]== 4:
     return 15
