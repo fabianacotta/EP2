@@ -260,9 +260,9 @@ def faz_jogada (faces, categoria, cartela):
   simples = calcula_pontos_regra_simples(faces)
   avancada = calcula_pontos_regra_avancada(faces)
 
-  if categoria in simples:
-    pontos = simples[categoria]
-    cartela["regra_simples"][categoria] = pontos
+  if int(categoria) in simples:
+    pontos = simples[int(categoria)]
+    cartela["regra_simples"][int(categoria)] = pontos
 
   if categoria in avancada:
     pontos = avancada[categoria]
